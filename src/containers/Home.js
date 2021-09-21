@@ -35,16 +35,15 @@ const Home = () => {
       <div className="content-center">
         <h2>Articles récemment ajoutés</h2>
         <div className="articles-list-center">
-          {data.offers.map((offer, index) => {
-            console.log("Offer ==>", offer);
-
+          {data.offers.map((offer) => {
             return (
               <Link to={`/offers/${offer._id}`}>
                 <div key={offer._id} className="item">
-                  {offer.product_pictures[0] && (
-                    <img className="item-picture" alt={offer.product_name} />
-                  )}
-
+                  <img
+                    className="item-picture"
+                    src={offer.product_image.secure_url}
+                    alt={offer.product_name}
+                  />
                   <p>{offer.product_price} €</p>
                   <p>{offer.product_details[0].TAILLE}</p>
                   <p>{offer.product_details[0].MARQUE}</p>

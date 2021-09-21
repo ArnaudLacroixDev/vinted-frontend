@@ -39,8 +39,6 @@ const Publish = ({ userToken }) => {
         }
       );
 
-      console.log("userToken front ===>", userToken);
-
       if (response.data._id) {
         history.push(`/offer/${response.data._id}`);
       }
