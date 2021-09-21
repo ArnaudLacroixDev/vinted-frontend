@@ -1,0 +1,255 @@
+/*----------------------------MAIN STYLES--------------------------------*/
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-center {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 50px 0px 20px;
+}
+
+.login-button,
+.signup-button,
+.buy-or-sell-button,
+.card-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/*----------------------------HEADER--------------------------------*/
+.header {
+  height: 50px;
+}
+
+.header-center {
+  width: 1240px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vinted-logo {
+  width: 70px;
+  object-fit: contain;
+  flex: 1;
+}
+
+.searchbar {
+  width: 540px;
+  height: 35px;
+  background-color: #f5f6f7;
+  border: none;
+  border-radius: 5px;
+  padding-left: 15px;
+  outline: none;
+}
+
+.right-nav-bar {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-button,
+.signup-button {
+  height: 30px;
+  width: 120px;
+  color: #09aeb6;
+  background-color: transparent;
+  border: #09aeb6 solid 1px;
+  border-radius: 5px;
+}
+
+.buy-or-sell-button {
+  height: 32px;
+  width: 130px;
+  color: white;
+  background-color: #09aeb6;
+  border-radius: 5px;
+  padding: 0px 10px;
+}
+
+.disconnect-button {
+  height: 32px;
+  width: 130px;
+  color: white;
+  background-color: #c2175b;
+  border: none;
+  border-radius: 5px;
+}
+
+/*----------------------------SIGNUP/LOGIN PAGE--------------------------------*/
+
+.signup-login-div {
+  width: 500px;
+  margin: 100px auto;
+}
+
+.signup-login-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.signup-login-div {
+  text-align: center;
+}
+
+.signup-login-div-input {
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #fcced3;
+  height: 35px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.signup-login-submit-button {
+  height: 50px;
+  width: 300px;
+  margin: 30px 0;
+  color: white;
+  background-color: #2cb1ba;
+  border: none;
+  border-radius: 5px;
+}
+
+/*----------------------------HOME PAGE--------------------------------*/
+/*------------------HERO BLOCK------------------*/
+.hero-block {
+  background-image: url("./img/hero-background.jpg");
+  position: relative;
+  width: 100%;
+  height: 455px;
+  background-position: 50%;
+  background-size: cover;
+}
+
+.card {
+  position: absolute;
+  top: 75px;
+  left: 340px;
+  width: 360px;
+  height: 220px;
+  padding: 25px;
+  background-color: white;
+  border-radius: 3px;
+  font-size: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 2px rgb(17 17 17 / 24%);
+}
+
+.card-button {
+  height: 45px;
+  width: 187px;
+  margin-top: 32px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background-color: #2baeb7;
+}
+
+/*------------------ITEM LIST------------------*/
+.articles-list-center {
+  width: 1240px;
+  display: flex;
+  margin: 16px auto;
+  flex-wrap: wrap;
+}
+
+.item {
+  margin: 0px 15px 50px 0px;
+}
+
+.item-picture {
+  width: 230px;
+  height: 325px;
+  object-fit: cover;
+}
+
+/*----------------------------OFFER PAGE--------------------------------*/
+
+.offer-body {
+  height: 1000px;
+  background-color: #ebedee;
+}
+
+.offer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.offer-body img {
+  height: 600px;
+  object-fit: contain;
+}
+
+.offer-infos {
+  width: 320px;
+  padding: 40px;
+  background-color: white;
+}
+
+.offer-price {
+  font-size: 24px;
+}
+
+.offer-details span {
+  flex: 1 1;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.offer-details span:nth-child(odd) {
+  color: #999;
+}
+
+.offer-details span:nth-child(2n) {
+  color: #666;
+  font-weight: 700;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(17, 17, 17, 0.1);
+}
+
+/*----------------------------PUBLISH PAGE--------------------------------*/
+
+.publication-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/*----------------------------PAYMENT PAGE--------------------------------*/
+.payment-body {
+  height: 1000px;
+  background-color: #eaedef;
+  margin-top: 30px;
+}
+
+.payment-card {
+  width: 600px;
+  margin: 0px auto;
+  padding: 50px;
+  background-color: #fff;
+}
+
+/*----------------------------FOOTER--------------------------------*/
