@@ -9,7 +9,9 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/offers");
+        const response = await axios.get(
+          "https://vinted-like-backend.herokuapp.com/offers"
+        );
 
         setData(response.data);
         setIsLoading(false);
@@ -37,16 +39,20 @@ const Home = () => {
         <div className="articles-list-center">
           {data.offers.map((offer) => {
             return (
-              <Link to={`/offers/${offer._id}`}>
+              <Link to={`/offer/${offer._id}`}>
                 <div key={offer._id} className="item">
+                  <p className="item-details">{offer.owner.account.username}</p>
                   <img
                     className="item-picture"
                     src={offer.product_image.secure_url}
                     alt={offer.product_name}
                   />
                   <p>{offer.product_price} €</p>
-                  <p>{offer.product_details[0].TAILLE}</p>
-                  <p>{offer.product_details[0].MARQUE}</p>
+                  <p className="item-details">
+                    {offer.product_details[0].MARQUE},{""}{" "}
+                    {offer.product_details[1].TAILLE}, {""}
+                    {offer.product_details[2].ÉTAT}
+                  </p>
                 </div>
               </Link>
             );

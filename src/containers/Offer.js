@@ -12,7 +12,9 @@ const Offer = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/offer/${id}`);
+        const response = await axios.get(
+          `https://vinted-like-backend.herokuapp.com/offer/${id}`
+        );
 
         setData(response.data);
         setIsLoading(false);
@@ -35,17 +37,22 @@ const Offer = () => {
             {data.product_details.map((elem, index) => {
               const keys = Object.keys(elem);
               return (
-                <div>
+                <div className="offer-list">
                   <li key={index} className="offer-details">
-                    <span>{keys[0]}</span>
-                    <span>{elem[keys[0]]}</span>
+                    <p>{keys[0]}: </p>
+                    <p>{elem[keys[0]]}</p>
                   </li>
                 </div>
               );
             })}
+            <div>
+              <div className="divider"></div>
+              <h3>{data.product_name}</h3>
+              <p>{data.product_description}</p>
+            </div>
             <Link
               to={{ pathname: "/payment", state: { data: data } }}
-              className="buy-or-sell-button"
+              className="buy-or-sell-button offer-buy-button"
             >
               Acheter
             </Link>

@@ -14,11 +14,14 @@ const Signup = ({ setUser }) => {
     try {
       event.preventDefault();
 
-      const response = await axios.post("http://localhost:4000/user/signup", {
-        email: email,
-        username: username,
-        password: password,
-      });
+      const response = await axios.post(
+        "https://vinted-like-backend.herokuapp.com/user/signup",
+        {
+          email: email,
+          username: username,
+          password: password,
+        }
+      );
 
       if (response.data.token) {
         setUser(response.data.token);

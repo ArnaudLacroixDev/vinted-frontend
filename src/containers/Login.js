@@ -12,10 +12,13 @@ const Login = ({ setUser }) => {
     try {
       event.preventDefault();
 
-      const response = await axios.post("http://localhost:4000/user/login", {
-        email: email,
-        password: password,
-      });
+      const response = await axios.post(
+        "https://vinted-like-backend.herokuapp.com/user/login",
+        {
+          email: email,
+          password: password,
+        }
+      );
       console.log(response.data);
 
       if (response.data.token) {
