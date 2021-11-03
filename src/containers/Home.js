@@ -47,7 +47,7 @@ const Home = () => {
                     src={offer.product_image.secure_url}
                     alt={offer.product_name}
                   />
-                  <p>{offer.product_price} €</p>
+                  <p className="price-color">{offer.product_price} €</p>
                   <p className="item-details">
                     {offer.product_details[0].MARQUE},{""}{" "}
                     {offer.product_details[1].TAILLE}, {""}

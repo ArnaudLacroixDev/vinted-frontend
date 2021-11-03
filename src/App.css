@@ -184,6 +184,10 @@ button {
   background-color: #2baeb7;
 }
 
+.price-color {
+  color: black;
+}
+
 .item-details {
   color: #999;
   font-size: 12px;
@@ -299,6 +303,12 @@ button {
   z-index: -1;
 }
 
+.inputButtonPicture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .input-file + label {
   height: 45px;
   font-weight: 700;
@@ -324,6 +334,7 @@ button {
 
 .publish-text-input > input,
 textarea {
+  font-family: inherit;
   width: 50%;
   border: none;
   border-bottom: 1px solid #ebedee;

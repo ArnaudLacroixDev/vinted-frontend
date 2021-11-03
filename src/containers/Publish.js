@@ -60,8 +60,14 @@ const Publish = ({ userToken }) => {
               onChange={(event) => setPicture(event.target.files[0])}
             />
             <label for="file">
-              <span className="input-sign">+</span>
-              <span>Ajoute une photo</span>
+              {picture === "" ? (
+                <div className="inputButtonPicture">
+                  <span className="input-sign">+</span>
+                  <span>Ajoute une photo</span>
+                </div>
+              ) : (
+                <span>Photo téléchargée !</span>
+              )}
             </label>
           </div>
           <div className="publish-text-input">
@@ -77,7 +83,8 @@ const Publish = ({ userToken }) => {
           <div className="publish-text-input">
             <p>Décris ton article</p>
             <textarea
-              placeholder="ex: porté quelquefois, taille correctement"
+              className="article-textarea"
+              placeholder="ex: Porté quelquefois, taille correctement"
               cols="30"
               rows="10"
               onChange={(event) => {
