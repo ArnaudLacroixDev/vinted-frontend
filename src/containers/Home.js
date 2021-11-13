@@ -23,7 +23,10 @@ const Home = () => {
   }, []);
 
   return isLoading ? (
-    <p>En cours de chargement...</p>
+    <div class="loader-div">
+      <div class="loader"></div>
+      <p>En cours de chargement...</p>
+    </div>
   ) : (
     <div>
       <div className="hero-block">
