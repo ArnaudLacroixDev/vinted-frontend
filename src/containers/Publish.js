@@ -1,3 +1,4 @@
+import "./Publish.css";
 import { Redirect, useHistory } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
@@ -48,21 +49,21 @@ const Publish = ({ userToken }) => {
   };
 
   return userToken ? (
-    <div className="publish-page">
+    <main className="publish-page">
       <div className="content-center">
         <h2>Vends ton article</h2>
-        <form className="publication-form" onSubmit={handleSubmit}>
-          <div className="upload-picture">
+        <form className="publish-publication-form" onSubmit={handleSubmit}>
+          <div className="publish-upload-picture">
             <input
               type="file"
               id="file"
-              className="input-file"
+              className="publish-input-file"
               onChange={(event) => setPicture(event.target.files[0])}
             />
             <label for="file">
               {picture === "" ? (
-                <div className="inputButtonPicture">
-                  <span className="input-sign">+</span>
+                <div className="publish-input-button-picture">
+                  <span className="publish-input-sign">+</span>
                   <span>Ajoute une photo</span>
                 </div>
               ) : (
@@ -156,16 +157,16 @@ const Publish = ({ userToken }) => {
               }}
             />
           </div>
-          <div className="form-validation-display">
+          <div className="publish-form-validation-display">
             <input
-              className="form-validation-button"
+              className="publish-form-validation-button"
               type="submit"
               value="Publier l'annonce"
             />
           </div>
         </form>
       </div>
-    </div>
+    </main>
   ) : (
     <Redirect to="/login" />
   );

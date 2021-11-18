@@ -1,0 +1,96 @@
+.publish-page {
+  background-color: #ebedee;
+}
+
+.publish-publication-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.publish-upload-picture {
+  height: 200px;
+  padding: 24px;
+  margin: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 0 2px grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.publish-input-file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.publish-input-button-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.publish-input-file + label {
+  height: 45px;
+  font-weight: 700;
+  color: #2baeb7;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #2baeb7;
+  border-radius: 5px;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.publish-text-input {
+  background-color: #fff;
+  box-shadow: 0 0 2px grey;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.publish-text-input > input,
+textarea {
+  font-family: inherit;
+  width: 50%;
+  border: none;
+  border-bottom: 1px solid #ebedee;
+  color: #000;
+  font-size: 16px;
+  outline: none;
+}
+
+.publish-text-input > input:focus,
+textarea:focus {
+  border-bottom: 1px solid #0ab1ba;
+}
+
+.publish-input-sign {
+  font-size: 50px;
+  margin-right: 10px;
+}
+
+.publish-form-validation-display {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.publish-form-validation-button {
+  width: 150px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #0ab1ba;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin: 30px 0;
+  cursor: pointer;
+}

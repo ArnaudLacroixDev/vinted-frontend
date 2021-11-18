@@ -1,0 +1,19 @@
+.item {
+  margin: 0px 15px 50px 0px;
+}
+
+.item-details {
+  color: #999;
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.item-picture {
+  width: 230px;
+  height: 325px;
+  object-fit: cover;
+}
+
+.item-price-color {
+  color: black;
+}

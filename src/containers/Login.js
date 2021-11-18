@@ -32,7 +32,7 @@ const Login = ({ setUser }) => {
   };
 
   return (
-    <div className="signup-login-div">
+    <main className="signup-login-div">
       <h2>Se connecter</h2>
       <form className="signup-login-content" onSubmit={handleSubmit}>
         <input
@@ -53,7 +53,7 @@ const Login = ({ setUser }) => {
           value="Se connecter"
         />
       </form>
-    </div>
+    </main>
   );
 };
 

@@ -1,0 +1,70 @@
+header {
+  height: 50px;
+}
+
+.header-center {
+  width: 1240px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-vinted-logo {
+  width: 70px;
+  object-fit: contain;
+  flex: 1;
+}
+
+.header-searchbar {
+  width: 540px;
+  height: 35px;
+  background-color: #f5f6f7;
+  border: none;
+  border-radius: 5px;
+  padding-left: 15px;
+}
+
+.header-right-nav-bar {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-login-button,
+.header-signup-button,
+.header-buy-or-sell-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.header-login-button,
+.header-signup-button {
+  height: 30px;
+  width: 120px;
+  color: #09aeb6;
+  background-color: transparent;
+  border: #09aeb6 solid 1px;
+  border-radius: 5px;
+}
+
+.header-buy-or-sell-button {
+  height: 32px;
+  width: 130px;
+  color: white;
+  background-color: #09aeb6;
+  border-radius: 5px;
+  padding: 0px 10px;
+}
+
+.header-disconnect-button {
+  height: 32px;
+  width: 130px;
+  color: white;
+  background-color: #c2175b;
+  border: none;
+  border-radius: 5px;
+}

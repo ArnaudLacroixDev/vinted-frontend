@@ -1,6 +1,10 @@
+import "./Home.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
+import Item from "../components/Item";
+import Loader from "../components/Loader";
 
 const Home = () => {
   const [data, setData] = useState();
@@ -23,46 +27,26 @@ const Home = () => {
   }, []);
 
   return isLoading ? (
-    <div class="loader-div">
-      <div class="loader"></div>
-      <p>En cours de chargement...</p>
-    </div>
+    <Loader />
   ) : (
-    <div>
-      <div className="hero-block">
-        <div className="card">
+    <main>
+      <div className="home-hero-block">
+        <div className="home-card">
           <h1>Prêts à faire du tri dans vos placards ?</h1>
-          <Link to="/publish" className="card-button" type="button">
+          <Link to="/publish" className="home-card-button" type="button">
             Commencer à vendre
           </Link>
         </div>
       </div>
       <div className="content-center">
         <h2>Articles récemment ajoutés</h2>
-        <div className="articles-list-center">
+        <div className="home-articles-list-center">
           {data.offers.map((offer) => {
-            return (
-              <Link to={`/offer/${offer._id}`}>
-                <div key={offer._id} className="item">
-                  <p className="item-details">{offer.owner.account.username}</p>
-                  <img
-                    className="item-picture"
-                    src={offer.product_image.secure_url}
-                    alt={offer.product_name}
-                  />
-                  <p className="price-color">{offer.product_price} €</p>
-                  <p className="item-details">
-                    {offer.product_details[0].MARQUE},{""}{" "}
-                    {offer.product_details[1].TAILLE}, {""}
-                    {offer.product_details[2].ÉTAT}
-                  </p>
-                </div>
-              </Link>
-            );
+            return <Item offer={offer} />;
           })}
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

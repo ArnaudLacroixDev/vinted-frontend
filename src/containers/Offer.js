@@ -1,3 +1,5 @@
+import "./SignupLogin.css";
+import "./Offer.css";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -31,7 +33,7 @@ const Offer = () => {
       <p>En cours de chargement...</p>
     </div>
   ) : (
-    <div className="offer-body">
+    <main className="offer-body">
       <div className="content-center offer-content">
         <img src={data.product_image.secure_url} alt={data.product_name} />
         <div className="offer-infos">
@@ -49,20 +51,20 @@ const Offer = () => {
               );
             })}
             <div>
-              <div className="divider"></div>
+              <div className="offer-divider"></div>
               <h3>{data.product_name}</h3>
               <p>{data.product_description}</p>
             </div>
             <Link
               to={{ pathname: "/payment", state: { data: data } }}
-              className="buy-or-sell-button offer-buy-button"
+              className="offer-buy-button"
             >
               Acheter
             </Link>
           </ul>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 
