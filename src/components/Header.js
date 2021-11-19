@@ -13,13 +13,6 @@ const Header = ({ userToken, setUser }) => {
             alt="Logo Vinted"
           />
         </Link>
-        <div>
-          <input
-            className="header-searchbar"
-            type="search"
-            placeholder="Rechercher des articles"
-          />
-        </div>
         <div className="header-right-nav-bar">
           <input
             className="header-disconnect-button"
@@ -47,13 +40,6 @@ const Header = ({ userToken, setUser }) => {
             alt="Logo Vinted"
           />
         </Link>
-        <div>
-          <input
-            className="header-searchbar"
-            type="search"
-            placeholder="Rechercher des articles"
-          />
-        </div>
         <div className="header-right-nav-bar">
           <Link to="/login" className="header-login-button" type="button">
             Se connecter

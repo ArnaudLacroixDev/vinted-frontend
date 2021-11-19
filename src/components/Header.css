@@ -17,14 +17,14 @@ header {
   flex: 1;
 }
 
-.header-searchbar {
+/* .header-searchbar {
   width: 540px;
   height: 35px;
   background-color: #f5f6f7;
   border: none;
   border-radius: 5px;
   padding-left: 15px;
-}
+} */
 
 .header-right-nav-bar {
   width: 400px;
