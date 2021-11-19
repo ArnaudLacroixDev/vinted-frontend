@@ -32,7 +32,7 @@ const Signup = ({ setUser }) => {
       console.log(error.message);
 
       if (error.response.status === 409) {
-        setErrorMessage("Cet email est déjà utilisé");
+        setErrorMessage("Cet email est déjà utilisé !");
       }
     }
   };
@@ -60,14 +60,16 @@ const Signup = ({ setUser }) => {
           placeholder="Mot de passe"
         />
 
-        <p>{errorMessage}</p>
+        <p className="signup-login-error-message">{errorMessage}</p>
         <input
           className="signup-login-submit-button"
           type="submit"
           value="S'inscrire"
         />
 
-        <a href="/login">Tu as déjà un compte ? Connecte-toi !</a>
+        <a href="/login" className="signup-already-registered">
+          Déjà un compte ? <span>Connecte-toi ici !</span>
+        </a>
       </form>
     </main>
   );

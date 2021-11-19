@@ -25,10 +25,24 @@
 .signup-login-submit-button {
   height: 50px;
   width: 300px;
-  margin: 30px 0;
+  margin: 30px 0 10px;
   color: white;
+  font-size: 18px;
   background-color: #2cb1ba;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.signup-already-registered {
+  color: #000000;
+  font-size: 14px;
+}
+
+.signup-login-error-message {
+  color: #ff0000;
+}
+
+.signup-already-registered span {
+  color: #2cb1ba;
 }
