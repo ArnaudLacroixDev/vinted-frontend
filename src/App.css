@@ -5,7 +5,7 @@ body {
 }
 
 .content-center {
-  width: 1240px;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -72,4 +72,24 @@ button {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* Rules */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* Rules */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Rules */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Rules */
 }
