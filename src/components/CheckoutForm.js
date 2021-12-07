@@ -95,7 +95,7 @@ const ResetButton = ({ onClick }) => (
   </button>
 );
 
-const CheckoutForm = () => {
+const CheckoutForm = ({ data }) => {
   const stripe = useStripe();
   const elements = useElements();
   const [error, setError] = useState(null);
@@ -212,7 +212,7 @@ const CheckoutForm = () => {
       </fieldset>
       {error && <ErrorMessage>{error.message}</ErrorMessage>}
       <SubmitButton processing={processing} error={error} disabled={!stripe}>
-        Pay $25
+        Payer {data.product_price} €
       </SubmitButton>
     </form>
   );
