@@ -168,7 +168,7 @@ const CheckoutForm = ({ data }) => {
           label="Nom"
           id="name"
           type="text"
-          placeholder="Jane Doe"
+          placeholder="Jean Dupont"
           required
           autoComplete="name"
           value={billingDetails.name}
@@ -180,7 +180,7 @@ const CheckoutForm = ({ data }) => {
           label="Email"
           id="email"
           type="email"
-          placeholder="janedoe@gmail.com"
+          placeholder="jeandupont@gmail.com"
           required
           autoComplete="email"
           value={billingDetails.email}
@@ -192,7 +192,7 @@ const CheckoutForm = ({ data }) => {
           label="Téléphone"
           id="phone"
           type="tel"
-          placeholder="(941) 555-0123"
+          placeholder="06.00.00.00.00"
           required
           autoComplete="tel"
           value={billingDetails.phone}
