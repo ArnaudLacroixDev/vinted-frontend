@@ -165,7 +165,7 @@ const CheckoutForm = ({ data }) => {
     <form className="Form" onSubmit={handleSubmit}>
       <fieldset className="FormGroup">
         <Field
-          label="Name"
+          label="Nom"
           id="name"
           type="text"
           placeholder="Jane Doe"
@@ -189,7 +189,7 @@ const CheckoutForm = ({ data }) => {
           }}
         />
         <Field
-          label="Phone"
+          label="Téléphone"
           id="phone"
           type="tel"
           placeholder="(941) 555-0123"
